@@ -1,0 +1,65 @@
+{
+    "name": "dainc007/discord-rest-client",
+    "description": "Framework-free PHP client for the Discord REST API v10: guild, channel, role and member management with rate limits, audit reasons and a test fake.",
+    "keywords": [
+        "discord",
+        "discord-api",
+        "rest",
+        "psr-18",
+        "bot"
+    ],
+    "homepage": "https://github.com/dainc007/discord-rest-client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Heinze",
+            "email": "danielheinze96@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/dainc007/discord-rest-client/issues",
+        "source": "https://github.com/dainc007/discord-rest-client"
+    },
+    "require": {
+        "php": "^8.3",
+        "php-http/discovery": "^1.19",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.1",
+        "psr/http-message": "^2.0"
+    },
+    "require-dev": {
+        "guzzlehttp/psr7": "^2.6",
+        "laravel/pint": "^1.32",
+        "pestphp/pest": "^3.0 || ^4.0",
+        "phpstan/phpstan": "^2.3"
+    },
+    "suggest": {
+        "guzzlehttp/guzzle": "A PSR-18 HTTP client that php-http/discovery finds on its own"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dainc007\\DiscordRestClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dainc007\\DiscordRestClient\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-live": "vendor/bin/pest --group=live",
+        "analyse": "vendor/bin/phpstan analyse",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": false
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
