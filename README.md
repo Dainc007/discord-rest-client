@@ -106,6 +106,7 @@ All extend `DiscordException`, which carries `httpStatus`, Discord's JSON error 
 ## Testing your code
 
 ```php
+use Dainc007\DiscordRestClient\Exceptions\MissingPermissionException;
 use Dainc007\DiscordRestClient\Testing\ClientFake;
 use Dainc007\DiscordRestClient\Testing\RecordedRequest;
 
